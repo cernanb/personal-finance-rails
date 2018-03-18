@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20180318171544) do
   enable_extension "plpgsql"
 
   create_table "budgets", force: :cascade do |t|
-    t.integer "monthly_amount"
-    t.integer "amount_spent"
+    t.integer "monthly_amount", default: 0
+    t.integer "amount_spent", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
